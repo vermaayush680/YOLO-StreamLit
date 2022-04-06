@@ -13,7 +13,7 @@ def main():
    st.set_page_config(page_title='YOLO Classifier', page_icon='favicon.png')
    st.title('African Wildlife Animal Classifier')
    st.subheader('Upload either Buffalo/Elephant/Rhino/Zebra image for prediction')
-   image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg","mp4"])
+   image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
    # code for Prediction
    prediction = ''
 
