@@ -16,6 +16,15 @@ def main():
    image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
    # code for Prediction
    prediction = ''
+   st.session_state['answer'] = ''
+   realans = ['', 'abc', 'edf']
+   if  st.session_state['answer'] in realans:
+           answerStat = "correct"
+   elif st.session_state['answer'] not in realans:
+           answerStat = "incorrect"
+           
+        
+        
 
    # creating a button for Prediction
 
