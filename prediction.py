@@ -6,11 +6,11 @@ import pandas as pd
 
 def server():
   st.session_state['answer'] = ''
-   realans = ['', 'abc', 'edf']
-   if  st.session_state['answer'] in realans:
-           answerStat = "correct"
-   elif st.session_state['answer'] not in realans:
-           answerStat = "incorrect"
+  realans = ['', 'abc', 'edf']
+  if  st.session_state['answer'] in realans:
+          answerStat = "correct"
+  elif st.session_state['answer'] not in realans:
+          answerStat = "incorrect"
 def load_image(image_file):
 	img = Image.open(image_file)
 	return img
@@ -35,7 +35,7 @@ def main():
      server()
      if image_file is not None:
          # To See details
-         server()
+        server()
         with st.spinner('Loading Model and Image...'):
             model = torch.hub.load('yolov5','custom',path='best.pt',source='local')
         file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
