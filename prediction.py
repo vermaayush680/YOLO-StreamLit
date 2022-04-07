@@ -37,7 +37,9 @@ def main():
          # To See details
         server()
         with st.spinner('Loading Model and Image...'):
+            server()
             model = torch.hub.load('yolov5','custom',path='best.pt',source='local')
+            server()
         file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
         st.write(file_details)
         img = load_image(image_file)
